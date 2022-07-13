@@ -1,0 +1,19 @@
+.input-create-btn {
+    background: var(--blue-dark);
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-weight: 700;
+    color: var(--gray-100);
+
+}
+
+.input-create-btn:hover {
+    background: var(--blue);
+    cursor: pointer;
+}
+
+
+.input-create-btn > span {
+    margin-left: 1rem;
+}
