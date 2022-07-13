@@ -27,7 +27,7 @@
 }
 
 .tasks-list {
-  width: calc(60vw + 109px);
+  width: calc(62.5vw + 109px);
   max-width: calc(1109px);
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@
 }
 
 .tasks-statistics {
-  width: calc(60vw + 109px);
+  width: calc(62.5vw + 109px);
   max-width: calc(1109px);
   display: flex;
   justify-content: space-between;

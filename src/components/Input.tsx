@@ -34,7 +34,7 @@ export const Input = ({ createNewTask }: IInputProps) => {
   return (
     <>
       <div className="input-box">
-        <input className="input-create" value={task} onChange={handleChangeNewTaskName}></input>
+        <input className="input-create" value={task} onChange={handleChangeNewTaskName} placeholder="Adicione uma nova tarefa"/>
         <button className="input-create-btn" onClick={handleCreateNewTask}>
           Criar <AiOutlinePlusCircle />
         </button>

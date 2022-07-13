@@ -2,17 +2,20 @@
     display: flex;
     justify-content: center;
     margin-top: -3vh;
+    margin-bottom: 3rem;
 }
 
 .input-create {
     margin-right: 10px;
     width: 60vw;
     max-width: 1000px;
+    padding: 1.5vw;
 
     color: var(--gray-100);
     background: var(--gray-500);
     border: 1px solid var(--gray-700);
     border-radius: 8px;
+    font-size: 1rem;
 }
 
 .input-create-btn {
