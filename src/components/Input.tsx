@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from "react";
 import { v4 as uuidV4 } from "uuid";
-import { AiOutlinePlusCircle } from 'react-icons/ai' 
+import { AiOutlinePlusCircle } from "react-icons/ai";
 import "./Input.css";
 
 interface IInputProps {
@@ -28,13 +28,17 @@ export const Input = ({ createNewTask }: IInputProps) => {
     };
 
     createNewTask(newTask);
-    setTask("")
+    setTask("");
   };
 
   return (
-    <div>
-      <input value={task} onChange={handleChangeNewTaskName}></input>
-      <button className="input-create-btn"onClick={handleCreateNewTask}>Criar <span><AiOutlinePlusCircle/></span> </button>
-    </div>
+    <>
+      <div className="input-box">
+        <input className="input-create" value={task} onChange={handleChangeNewTaskName}></input>
+        <button className="input-create-btn" onClick={handleCreateNewTask}>
+          Criar <AiOutlinePlusCircle />
+        </button>
+      </div>
+    </>
   );
 };
