@@ -18,9 +18,7 @@ function App() {
     title: string;
     isCompleted: boolean;
   }) => {
-    const newTasksList = [...tasks, newTask]
-    setTasks(newTasksList);
-    localStorage.setItem('tasks', JSON.stringify(newTasksList));
+    setTasks([...tasks, newTask]);
   };
 
   const getNumberOfTasksCompleted = () => {
@@ -33,7 +31,6 @@ function App() {
       return task;
     });
     setTasks(tasksUpdated);
-    localStorage.setItem('tasks', JSON.stringify(tasksUpdated));
   };
 
   const deleteTask = (id: string) => {
@@ -41,6 +38,9 @@ function App() {
     setTasks([...tasksWithoutDeletedTask]);
   };
 
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  })
 
   return (
     <div className="App">
