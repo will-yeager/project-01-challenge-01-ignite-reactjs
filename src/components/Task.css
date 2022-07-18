@@ -16,9 +16,10 @@
     color: var(--gray-100);
     font-size: 1rem;
     margin-left: 10px;
+    overflow-wrap: anywhere;
+
 
     width: 100%;
-
 }
 
 .task-title-unchecked {
