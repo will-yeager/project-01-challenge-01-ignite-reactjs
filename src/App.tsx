@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Header, Input, TasksList } from "./components";
 
 import "./App.css";
@@ -11,14 +11,16 @@ export interface ITask {
 }
 
 function App() {
-  const [tasks, setTasks] = useState<ITask[]>([]);
+  const [tasks, setTasks] = useState<ITask[]>(JSON.parse(localStorage.getItem("tasks") || "[]"));
 
   const handleCreateNewTask = (newTask: {
     id: string;
     title: string;
     isCompleted: boolean;
   }) => {
-    setTasks([...tasks, newTask]);
+    const newTasksList = [...tasks, newTask]
+    setTasks(newTasksList);
+    localStorage.setItem('tasks', JSON.stringify(newTasksList));
   };
 
   const getNumberOfTasksCompleted = () => {
@@ -31,12 +33,14 @@ function App() {
       return task;
     });
     setTasks(tasksUpdated);
+    localStorage.setItem('tasks', JSON.stringify(tasksUpdated));
   };
 
   const deleteTask = (id: string) => {
     const tasksWithoutDeletedTask = tasks.filter((task) => task.id !== id);
     setTasks([...tasksWithoutDeletedTask]);
   };
+
 
   return (
     <div className="App">
