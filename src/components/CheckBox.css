@@ -1,13 +1,10 @@
-.checkbox {
-  align-self: center;
-  justify-self: center;
-  min-width: 20%;
-}
+.checkbox-button-checked,
+.checkbox-button-unchecked {
+  cursor: pointer;
+  background: none;
+  border: 0;
 
-.checkbox-button-checked, .checkbox-button-unchecked {
-    cursor: pointer;
-    background: none;
-    border: 0;
+  margin-left: 1rem;
 }
 
 .checkbox-checked {
@@ -19,8 +16,8 @@
 }
 
 .checkbox-checked:hover {
-    background: var(--purple)
-} 
+  background: var(--purple);
+}
 
 .checkbox-unchecked {
   color: var(--blue);
@@ -28,6 +25,6 @@
 }
 
 .checkbox-unchecked:hover {
-    background: var(--gray-600);
-    border-radius: 100%;
+  background: var(--gray-600);
+  border-radius: 100%;
 }

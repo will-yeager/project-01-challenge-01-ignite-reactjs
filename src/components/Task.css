@@ -1,32 +1,28 @@
 .task-box {
-    display: grid;
-    grid-template-columns: 10% 80% 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     background-color: var(--gray-500);
     border-radius: 4px;
     padding: 1rem 0;
     margin: 0.5rem;
+    overflow-x: scroll;
 }
 
-.task-title {
+.task-title, .task-title-unchecked {
     text-align: start;
     line-break: anywhere;
     margin: 0px 0px;
     color: var(--gray-100);
     font-size: 1rem;
+    margin-left: 10px;
 
-    align-self: center;
-    justify-self: start;
+    width: 100%;
+
 }
 
 .task-title-unchecked {
-    text-align: start;
-    line-break: anywhere;
-    margin: 0px 0px;
     color: var(--gray-300);
-    font-size: 1rem;
-
-    align-self: center;
-    justify-self: start;
     text-decoration: line-through;
 }
