@@ -3,26 +3,30 @@
     justify-content: center;
     margin-top: -3vh;
     margin-bottom: 3rem;
+    width: 60%;
 }
 
 .input-create {
     margin-right: 10px;
-    width: 60vw;
-    max-width: 1000px;
-    padding: 1.5vw;
+    width: 100%;
+    padding: 20px;
 
     color: var(--gray-100);
     background: var(--gray-500);
     border: 1px solid var(--gray-700);
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 1rem;
+}
+
+.input-create:focus {
+    outline: none !important;
+    border-color: var(--purple-dark);
 }
 
 .input-create-btn {
     background-color: var(--blue-dark);
     border: none;
     padding: 0.75rem 1rem;
-    border-radius: 4px;
     font-weight: 700;
     color: var(--gray-100);
 
@@ -30,8 +34,9 @@
     justify-content: space-between;
     align-items: center;
     font-size: 1rem;
+    border-radius: 10px;
     
-    width: 90px;
+    min-width: 90px;
 }
 
 .input-create-btn:hover {

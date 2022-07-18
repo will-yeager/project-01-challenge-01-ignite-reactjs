@@ -18,8 +18,14 @@
   justify-content: center;
 }
 
-.tasks-display {
-  width: 100vw;
+.App-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App-display {
+  width: 60%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -27,15 +33,14 @@
 }
 
 .tasks-list {
-  width: calc(62.5vw + 109px);
-  max-width: calc(1109px);
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.tasks-span {
+.App-span {
   padding: 0 0.5rem;
   border-radius: 10px;
   background: var(--gray-400);
@@ -43,20 +48,19 @@
   display: inline-block;
 }
 
-.tasks-statistics {
-  width: calc(62.5vw + 109px);
-  max-width: calc(1109px);
+.App-statistics {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.tasks-created {
+.App-created {
   color: var(--blue);
   font-weight: bold;
   font-size: 1rem;
 }
 
-.tasks-concluded {
+.App-concluded {
   color: var(--purple-dark);
   font-weight: bold;
   font-size: 1rem;

@@ -1,7 +1,4 @@
 .task-box {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     display: grid;
     grid-template-columns: 10% 80% 10%;
     width: 100%;
@@ -20,4 +17,16 @@
 
     align-self: center;
     justify-self: start;
+}
+
+.task-title-unchecked {
+    text-align: start;
+    line-break: anywhere;
+    margin: 0px 0px;
+    color: var(--gray-300);
+    font-size: 1rem;
+
+    align-self: center;
+    justify-self: start;
+    text-decoration: line-through;
 }

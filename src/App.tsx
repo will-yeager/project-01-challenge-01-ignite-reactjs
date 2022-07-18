@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Header, Input, TasksList } from "./components"
+import { Header, Input, TasksList } from "./components";
 
 import "./App.css";
+import { NoTasks } from "./components/NoTasks";
 
 export interface ITask {
   id: any;
@@ -30,30 +31,42 @@ function App() {
       return task;
     });
     setTasks(tasksUpdated);
-  }
+  };
 
   const deleteTask = (id: string) => {
     const tasksWithoutDeletedTask = tasks.filter((task) => task.id !== id);
     setTasks([...tasksWithoutDeletedTask]);
-  }
+  };
 
   return (
     <div className="App">
-      <Header/>
-      <Input createNewTask={handleCreateNewTask} />
-      <div className="tasks-display">
-        <div className="tasks-statistics">
-          <p className="tasks-created">
-            Tarefas criadas <span className="tasks-span">{tasks.length}</span>
-          </p>
-          <p className="tasks-concluded">
-            Tarefas concluidas{" "}
-            <span className="tasks-span">
-              {getNumberOfTasksCompleted()} de {tasks.length}
-            </span>
-          </p>
+      <Header />
+      <div className="App-body">
+        <Input createNewTask={handleCreateNewTask} />
+        <div className="App-display">
+          <div className="App-statistics">
+            <p className="App-created">
+              Tarefas criadas <span className="App-span">{tasks.length}</span>
+            </p>
+            <p className="App-concluded">
+              Tarefas concluidas{" "}
+              <span className="App-span">
+                {getNumberOfTasksCompleted()} de {tasks.length}
+              </span>
+            </p>
+          </div>
+          {tasks.length === 0 ? (
+            <NoTasks></NoTasks>
+          ) : (
+            <>
+              <TasksList
+                tasks={tasks}
+                handleDeleteTask={deleteTask}
+                handleChangeCompletedTaskStatus={changeCompletedTaskStatus}
+              />
+            </>
+          )}
         </div>
-        <TasksList tasks={tasks} handleDeleteTask={deleteTask} handleChangeCompletedTaskStatus={changeCompletedTaskStatus}/>
       </div>
     </div>
   );

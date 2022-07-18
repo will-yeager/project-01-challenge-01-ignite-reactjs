@@ -1,5 +1,33 @@
 .checkbox {
-    align-self: center;
-    justify-self: center;
-    min-width: 20%;
+  align-self: center;
+  justify-self: center;
+  min-width: 20%;
+}
+
+.checkbox-button-checked, .checkbox-button-unchecked {
+    cursor: pointer;
+    background: none;
+    border: 0;
+}
+
+.checkbox-checked {
+  color: var(--white);
+  font-size: 1rem;
+  border-radius: 100%;
+  background: var(--purple-dark);
+  padding: 0.25rem;
+}
+
+.checkbox-checked:hover {
+    background: var(--purple)
+} 
+
+.checkbox-unchecked {
+  color: var(--blue);
+  font-size: 1.5rem;
+}
+
+.checkbox-unchecked:hover {
+    background: var(--gray-600);
+    border-radius: 100%;
 }

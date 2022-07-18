@@ -1,0 +1,21 @@
+.notasks-box {
+    width: 100%;
+    border-top: 2px solid var(--gray-400);
+    border-radius: 10px;
+
+    margin-top: 1rem;
+}
+
+.notasks-box > svg {
+    margin-top: 5rem;
+}
+
+
+.notasks-text:nth-child(2) {
+    color: var(--gray-300);
+    font-weight: bold;
+}
+
+.notasks-text:nth-child(3) {
+    color: var(--gray-300);
+}
