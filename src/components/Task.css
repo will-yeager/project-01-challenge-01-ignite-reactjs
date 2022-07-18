@@ -12,7 +12,7 @@
 
 .task-title, .task-title-unchecked {
     text-align: start;
-    line-break: anywhere;
+    line-break: auto;
     margin: 0px 0px;
     color: var(--gray-100);
     font-size: 1rem;
